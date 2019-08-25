@@ -9,7 +9,7 @@ The intent is primarily to facilitate type-safety in libraries (like mobx-state-
 Source:
 
 ```js
-import a2g from 'async-to-generator.macro';
+import a2g from '@ts-delight/async-to-generator.macro';
 import {flow} from 'mobx-state-tree';
 
 flow(a2g(async () => {
@@ -35,8 +35,8 @@ Refer babel's [setup instructions](https://babeljs.io/setup) to learn how to set
 
 1. Install `babel-plugin-macros` and `async-to-generator.macro`:
 
-```js
-npm install --save-dev babel-plugin-macros async-to-generator.macro
+```sh
+npm install --save-dev babel-plugin-macros @ts-delight/async-to-generator.macro
 ```
 
 2. Add babel-plugin-macros to .babelrc (if not already preset):
