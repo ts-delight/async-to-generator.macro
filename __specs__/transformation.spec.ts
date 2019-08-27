@@ -7,14 +7,14 @@ test('Transformations', () => {
     "\\"use strict\\";
 
     const c1 = function* () {
-      await fetch(\\"/foo\\");
+      yield fetch(\\"/foo\\");
     };
 
     const c2 = flow(function* () {
-      await fetch(\\"/foo\\");
+      yield fetch(\\"/foo\\");
     });
     const c3 = flow(function* fetchData() {
-      await fetch(\\"/foo\\");
+      yield fetch(\\"/foo\\");
     });"
   `);
 });

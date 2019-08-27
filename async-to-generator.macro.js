@@ -69,7 +69,7 @@ const AsyncToGenerator = ({ references, state, babel }) => {
 
     parentPath.traverse({
       AwaitExpression(path) {
-        path.type = 'YieldExpression';
+        path.node.type = 'YieldExpression';
       },
     });
     target.async = false;
