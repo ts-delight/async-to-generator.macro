@@ -1,6 +1,6 @@
 declare function AsyncToGenerator<
-    Args extends any[],
-    T extends Generator = IterableIterator<any>
->(fn: (...args: Args) => Promise<any>): (...args: Args) => T;
+    TArgs extends any[],
+    TRet,
+    >(fn: (...args: TArgs) => Promise<TRet>): (...args: TArgs) => IterableIterator<TRet>;
 
 export = AsyncToGenerator;
